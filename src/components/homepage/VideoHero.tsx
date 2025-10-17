@@ -12,7 +12,7 @@ const VideoHero: React.FC = () => {
           playsInline
         >
           <source
-            src="https://res.cloudinary.com/ddyymyvny/video/upload/v1760587521/210317_small_bgrn0n.mp4"
+            src="https://res.cloudinary.com/ddyymyvny/video/upload/v1760703716/Banner_Video_bd66ag.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
