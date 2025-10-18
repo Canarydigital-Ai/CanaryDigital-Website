@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../../assets/TextLogo.png";
+import { motion } from "framer-motion";
 import CanaryLogo from "../../assets/CANARY LOGO 2.0-01.png";
 
 const Navbar: React.FC = () => {
@@ -17,18 +18,26 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="bg-[#000000] px-6 py-4">
-      <div className="max-w-[95%] mx-auto flex items-center justify-between">
+    <nav className="bg-[#000000] px-4 md:px-12 py-4">
+      <div className=" mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
           <div className="flex items-center bg-[#111111] p-4 rounded-full">
-            <img
+            <motion.img
               src={CanaryLogo}
               alt="Canary Digital Logo"
-              className="w-[45px] h-[45px]"
+              className="w-[35px] h-[35px]"
+              animate={{
+                rotateY: [0, 180, 360],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
             />
           </div>
-          <img src={Logo} alt="" className="w-[76px] h-[46px]" />
+          <img src={Logo} alt="" className=" " />
         </div>
 
         {/* Navigation Links */}

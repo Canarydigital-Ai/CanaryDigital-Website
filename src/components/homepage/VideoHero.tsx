@@ -2,8 +2,8 @@ import React from 'react';
 
 const VideoHero: React.FC = () => {
   return (
-    <section className="relative w-full bg-gray-900">
-      <div className="relative w-full h-[730px] overflow-hidden">
+    <section className="relative w-full border-b border-[#242424] bg-[#000000]">
+      <div className="relative w-full h-[730px] overflow-hidden ">
         <video
           className="w-full h-full object-cover"
           autoPlay
@@ -16,10 +16,7 @@ const VideoHero: React.FC = () => {
             type="video/mp4"
           />
           Your browser does not support the video tag.
-        </video>
-        
-
-        
+        </video> 
       </div>
     </section>
   );
