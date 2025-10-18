@@ -3,6 +3,8 @@ import Navbar from "../../components/navbar/Navbar";
 import VideoHero from "../../components/homepage/VideoHero";
 import HeroBrandsSection from "../../components/homepage/HeroBrandsSection";
 import OurProductSection from "../../components/homepage/OurProductSection";
+import OurServiceSection from "../../components/homepage/OurServiceSection";
+import WorksSection from "../../components/homepage/WorksSection";
 
 const HomePage: React.FC = () => {
   return (
@@ -11,6 +13,8 @@ const HomePage: React.FC = () => {
       <VideoHero />
       <HeroBrandsSection />
       <OurProductSection />
+      <OurServiceSection />
+      <WorksSection />
     </div>
   );
 };

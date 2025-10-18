@@ -1,11 +1,84 @@
 @import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
+/* Hide scrollbars globally */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-
-/* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* ---------------------------
+   ES Rebond Grotesque Fonts
+   --------------------------- */
+@font-face {
+  font-family: "ES Rebond Grotesque";
+  src: url("./assets/font/ES Rebond/ESRebondGrotesqueTRIAL-Thin-BF6618904123ce3.otf")
+    format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ES Rebond Grotesque";
+  src: url("./assets/font/ES Rebond/ESRebondGrotesqueTRIAL-Extralight-BF6618904107ccc.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ES Rebond Grotesque";
+  src: url("./assets/font/ES Rebond/ESRebondGrotesqueTRIAL-Light-BF66189040e6001.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ES Rebond Grotesque";
+  src: url("./assets/font/ES Rebond/ESRebondGrotesqueTRIAL-Regular-BF66189040b697b.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ES Rebond Grotesque";
+  src: url("./assets/font/ES Rebond/ESRebondGrotesqueTRIAL-Medium-BF6618904088566.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ES Rebond Grotesque";
+  src: url("./assets/font/ES Rebond/ESRebondGrotesqueTRIAL-MediumItalic-BF6618904082cb3.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ES Rebond Grotesque";
+  src: url("./assets/font/ES Rebond/ESRebondGrotesqueTRIAL-Semibold-BF66189040640ea.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ES Rebond Grotesque";
+  src: url("./assets/font/ES Rebond/ESRebondGrotesqueTRIAL-Extrabold-BF661890400e032.otf")
+    format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Set as default global font */
+body {
+  font-family: "ES Rebond Grotesque", sans-serif;
 }
