@@ -5,13 +5,16 @@ import Shape2 from "../../assets/videos/shape 2.mp4";
 import Shape3 from "../../assets/videos/shape 3.mp4";
 
 const WorksSection: React.FC = () => {
-
-  const WorkVideo1 = "https://res.cloudinary.com/ddyymyvny/video/upload/v1760790731/ug_mocktail5_rkiaoy.mp4";
-  const WorkVideo2 = "https://res.cloudinary.com/ddyymyvny/video/upload/v1760790730/ug_mocktail33_x9j1lg.mp4";
+  const WorkVideo1 =
+    "https://res.cloudinary.com/ddyymyvny/video/upload/v1760790731/ug_mocktail5_rkiaoy.mp4";
+  const WorkVideo2 =
+    "https://res.cloudinary.com/ddyymyvny/video/upload/v1760790730/ug_mocktail33_x9j1lg.mp4";
+  const WorkVideo3 =
+    "https://res.cloudinary.com/ddyymyvny/video/upload/v1760790748/poster_scrolling_main_file_pre_qwhwpm.mp4";
 
   return (
     <div
-      className=" text-white px-4 md:px-10 lg:px-16 py-20 min-h-screen flex flex-col relative"
+      className=" text-white px-4 md:px-10 lg:px-16 py-20 pb-40 min-h-screen flex flex-col relative"
       style={{
         borderTop: "1px solid transparent",
         borderImage:
@@ -26,7 +29,7 @@ const WorksSection: React.FC = () => {
             <span className="w-[6px] h-[6px] bg-[#30CF00] rounded-full absolute top-1/2 -translate-y-1/2 -right-3"></span>
           </h1>
 
-          <button className="group bg-[#FBCA0C] text-black text-xs font-normal leading-[23px] px-6 md:h-[30px] rounded-md flex items-center justify-center gap-2 overflow-hidden relative transition-all duration-500 cursor-pointer">
+          <button className="group bg-[#FBCA0C] text-black text-xs font-normal leading-[23px] px-6 md:h-[30px] rounded-md flex items-center justify-center gap-2 overflow-hidden relative transition-all duration-600 cursor-pointer">
             {/* Original text that moves left */}
             <span className="flex items-center gap-2 transition-all duration-500 ease-out group-hover:-translate-x-60 group-hover:opacity-0">
               View Portfolio{" "}
@@ -38,8 +41,7 @@ const WorksSection: React.FC = () => {
             </span>
           </button>
         </div>
-
-        {/* Arrow Controls — stays at top-right */}
+ 
         <div className="flex justify-center items-center gap-6">
           <div className="flex items-center gap-2">
             {[Shape2, Shape1, Shape3].map((shape, i) => (
@@ -62,12 +64,44 @@ const WorksSection: React.FC = () => {
         </div>
       </div>
 
+      <div className="flex justify-between mt-12">
+        <div className="bg-[#111111] p-4 overflow-hidden transition-all duration-500 ease-in-out group hover:rounded-[80px] group-hover:backdrop-blur-sm">
+          <div className="flex gap-3">
+            <div className="overflow-hidden transition-all duration-500 ease-in-out group-hover:rounded-l-[62px]">
+              <video
+                src={WorkVideo1}
+                autoPlay
+                loop
+                muted
+                className="w-[480px] h-auto transition-all duration-500 ease-in-out  "
+              ></video>
+            </div>
 
-      <div>
-              <div className="flex gap-2">
-        <video src={WorkVideo1} autoPlay loop muted className="w-[480px] h-auto"></video>
-        <video src={WorkVideo2}  autoPlay loop muted className="w-[480px] h-auto"></video>
-      </div>
+            <div className="overflow-hidden transition-all duration-500 ease-in-out group-hover:rounded-r-[62px]">
+              <video
+                src={WorkVideo2}
+                autoPlay
+                loop
+                muted
+                className="w-[480px] h-auto transition-all duration-500 ease-in-out  "
+              ></video>
+            </div>
+          </div>
+        </div>
+
+        <div className="p-4 overflow-hidden transition-all duration-500 ease-in-out group hover:rounded-[80px] group-hover:backdrop-blur-sm">
+          <div className="flex gap-3">
+            <div className="overflow-hidden transition-all duration-500 ease-in-out group-hover:rounded-[62px]">
+              <video
+                src={WorkVideo3}
+                autoPlay
+                loop
+                muted
+                className="w-[660px] h-auto transition-all duration-500 ease-in-out  "
+              ></video>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

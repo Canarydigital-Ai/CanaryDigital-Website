@@ -44,6 +44,7 @@ const OurProductSection: React.FC = () => {
 
   return (
     <div
+      id="our-products-section"
       className="bg-black text-white px-4 md:px-10 lg:px-16 py-20 pb-36 min-h-screen flex flex-col justify-center relative"
       style={{
         borderBottom: "1px solid transparent",
@@ -91,7 +92,7 @@ const OurProductSection: React.FC = () => {
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-[700px] object-cover"
+                  className="w-full h-[700px] object-cover hover:scale-115 transition duration-500 ease-in-out"
                 />
               </div>
               <p className="text-sm md:text-base lg:text-[22px] text-gray-200 mt-3">
