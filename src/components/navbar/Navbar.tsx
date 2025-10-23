@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Logo from "../../assets/TextLogo.png"; 
+import Logo from "../../assets/TextLogo.png";
 import CanaryLogo from "../../assets/videos/logo turn.mp4";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [activeLink, setActiveLink] = useState("Home");
@@ -9,6 +10,8 @@ const Navbar: React.FC = () => {
   const [selectedService, setSelectedService] = useState(
     "AI Powered Solutions"
   );
+
+  const navigate = useNavigate();
 
   const navLinks = [
     "Home",
@@ -67,7 +70,10 @@ const Navbar: React.FC = () => {
     <nav className="bg-[#000000] px-4 md:px-12 py-4 relative">
       <div className="mx-auto flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center">
+        <div
+          onClick={() => navigate("/")}
+          className="flex items-center cursor-pointer"
+        >
           <video
             src={CanaryLogo}
             autoPlay

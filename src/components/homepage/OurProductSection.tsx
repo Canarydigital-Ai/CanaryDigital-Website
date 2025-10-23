@@ -45,7 +45,7 @@ const OurProductSection: React.FC = () => {
   return (
     <div
       id="our-products-section"
-      className="bg-black text-white px-4 md:px-10 lg:px-16 py-20 pb-36 min-h-screen flex flex-col justify-center relative"
+      className=" px-4 md:px-10 lg:px-16 py-20 pb-36 min-h-screen flex flex-col justify-center relative"
       style={{
         borderBottom: "1px solid transparent",
         borderImage:

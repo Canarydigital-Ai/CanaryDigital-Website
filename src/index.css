@@ -96,3 +96,32 @@ body {
 .animate-scroll {
   animation: scroll 35s linear infinite;
 }
+
+
+.faq-card {
+  position: relative;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(251, 202, 12, 0.05) 0%,
+    rgba(251, 202, 12, 0.12) 100%
+  );
+}
+
+.faq-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #363636, #716d5e);
+
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+ 
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+

@@ -37,7 +37,7 @@ const HeroBrandsSection: React.FC = () => {
 
 
   return (
-    <section className="bg-black text-white px-4 md:px-14 py-10 pb-20 ">
+    <section className="  px-4 md:px-14 py-10 pb-20 ">
       <div className="space-y-24">
         {/* Hero Text */}
         <div className="flex items-start justify-between">
