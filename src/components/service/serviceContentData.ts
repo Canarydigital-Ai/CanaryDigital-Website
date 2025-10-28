@@ -14,7 +14,6 @@ import GridIcon10 from "../../assets/service images/Grid Icon 10.png";
 import GridIcon11 from "../../assets/service images/Grid Icon 11.png";
 import GridIcon12 from "../../assets/service images/Grid Icon 12.png";
 
-
 import GridIcon13 from "../../assets/service images/Grid Icon 13.png";
 import GridIcon14 from "../../assets/service images/Grid Icon 14.png";
 import GridIcon15 from "../../assets/service images/Grid Icon 15.png";
@@ -24,8 +23,7 @@ import DesignImage from "../../assets/service images/DesignImage.png";
 
 import AffiliateImg1 from "../../assets/service images/Affiliate Img 1.png";
 import AffiliateImg2 from "../../assets/service images/Affiliate Img 2.png";
-import AffiliateImg3 from "../../assets/service images/Affiliate Img 3.png"; 
-
+import AffiliateImg3 from "../../assets/service images/Affiliate Img 3.png";
 
 import SEOImg1 from "../../assets/service images/SEO Img 1.png";
 import SEOImg2 from "../../assets/service images/SEO Img 2.png";
@@ -85,12 +83,12 @@ export type ServiceDataType = {
 };
 
 export const serviceContentData: Record<string, ServiceDataType> = {
-  "AI-Powered Solutions": {
+  "AI Powered Solutions": {
     title: "AI-Powered Solutions",
-    desc: `Unlock the power of AI to automate, optimize, and scale your operations. Our tailored AI-powered software solutions transform raw data into actionable 
-    insights through business intelligence and predictive analytics. We streamline workflows, automate repetitive tasks, and reduce errors with smart automation tools.
+    desc: `Unlock the power of AI to automate, optimize, and scale your operations. Our tailored AI-powered software solutions transform raw data into actionable insights 
+    through business intelligence and predictive analytics. We streamline workflows, automate repetitive tasks, and reduce errors with smart automation tools. 
     Harness natural language processing for chatbots, sentiment analysis, and advanced customer support. Our custom AI systems integrate seamlessly into your 
-    existing setup and evolve alongside your business. Partner with us to gain efficiency, cut costs, and stay ahead of the competition`,
+    existing setup and evolve alongside your business. Partner with us to gain efficiency, cut costs, and stay ahead of the competition.`,
     video:
       "https://res.cloudinary.com/ddyymyvny/video/upload/v1761107950/u5254972858_httpss.mj_nf3mtk.mp4",
     whatMakes: {
@@ -146,7 +144,10 @@ export const serviceContentData: Record<string, ServiceDataType> = {
 
   "Web Development": {
     title: "Web Development",
-    desc: `Your website is your brand’s first impression—make it fast, responsive, and conversion-ready. Our web development and optimization services ensure your site not only looks great but also performs flawlessly. We build clean, mobile-friendly websites with user experience, speed, and SEO in mind. Already have a site? We optimize page speed, structure, and content to improve engagement and rankings. From custom builds to performance upgrades, we tailor every project to your business needs. Let your website work smarter and load faster—across all devices.`,
+    desc: `Your website is your brand’s first impression—make it fast, responsive, and conversion-ready. Our web development and optimization services 
+    ensure your site not only looks great but also performs flawlessly. We build clean, mobile-friendly websites with user experience, speed, and SEO in mind. 
+    Already have a site? We optimize page speed, structure, and content to improve engagement and rankings. From custom builds to performance upgrades, 
+    we tailor every project to your business needs. Let your website work smarter and load faster—across all devices.`,
     video:
       "https://res.cloudinary.com/ddyymyvny/video/upload/v1761128945/Untitled_video_-_Made_with_Clipchamp_1_qvugkt.mp4",
     whatMakes: {
@@ -347,181 +348,175 @@ export const serviceContentData: Record<string, ServiceDataType> = {
     ],
   },
 
-"Digital Marketing": {
-  title: "Digital Marketing",
-  desc: `Digital marketing that is sharp, strategic, and results driven. At Canary, we build custom growth strategies across SEO, Google Ads, Meta Ads, email campaigns, 
+  "Digital Marketing": {
+    title: "Digital Marketing",
+    desc: `Digital marketing that is sharp, strategic, and results driven. At Canary, we build custom growth strategies across SEO, Google Ads, Meta Ads, email campaigns, 
   and content marketing. From boosting visibility to generating high quality leads, we turn every click into measurable impact. Whether you are launching, scaling, 
   or revamping, we make your brand impossible to ignore`,
-  video:
-    "https://res.cloudinary.com/ddyymyvny/image/upload/v1761128678/470c15492c6eabc7c60df818c2d777548a8ceaa6_ymftjq.gif",
-  whatMakes: {
-    title: " ",
-    desc: ``,
+    video:
+      "https://res.cloudinary.com/ddyymyvny/image/upload/v1761128678/470c15492c6eabc7c60df818c2d777548a8ceaa6_ymftjq.gif",
+    whatMakes: {
+      title: " ",
+      desc: ``,
+    },
+    features: [
+      {
+        img: "",
+        title: "",
+        desc: "",
+      },
+      {
+        img: "",
+        title: "",
+        desc: "",
+      },
+      {
+        img: "",
+        title: "",
+        desc: "",
+      },
+      {
+        img: "",
+        title: "",
+        desc: "",
+      },
+    ],
+    faqs: [
+      {
+        question: "What’s included in your SEO services?",
+        answer:
+          "Blog writing, website content, SEO copy, social media posts, email campaigns, and more.",
+      },
+      {
+        question: "How long does it take to see results?",
+        answer:
+          "Most websites begin seeing improvements in 3–6 months, depending on goals and competition.",
+      },
+      {
+        question: "Is ongoing SEO necessary?",
+        answer:
+          "Yes, search engines update regularly, so ongoing SEO keeps your site relevant and competitive.",
+      },
+      {
+        question: "Do you offer local SEO?",
+        answer:
+          "Yes, we help businesses rank for local searches and reach nearby customers effectively.",
+      },
+    ],
+    marketingSections: [
+      {
+        key: "seo",
+        title: "SEO Services",
+        images: [SEOImg1, SEOImg2, SEOImg3, SEOImg4, SEOImg5, SEOImg6],
+        description: `Our expert SEO services help you boost visibility, drive organic traffic, and grow steadily. 
+        We handle everything from smart keyword research and on-page fixes to technical SEO and quality backlinks. 
+        With regular tracking and strategies tailored just for you, we help businesses in Kochi and beyond stay ahead both locally and globally.`,
+      },
+      {
+        key: "social",
+        title: "Social Media Marketing",
+        images: [SocialImg1, SocialImg2, SocialImg3, SocialImg4, SocialImg5],
+        description: `We turn your social media into a powerful tool for brand growth. With smart strategies, creative storytelling, and AI insights, 
+        we create content that builds real connections and lasting loyalty. From high-performing reels to meaningful engagement, 
+        we help your brand stay top of mind on Instagram, Facebook, LinkedIn, and more. Ready to make an impact?`,
+      },
+      {
+        key: "marketing",
+        title: "Performance Marketing",
+        images: [
+          MarketingImg1,
+          MarketingImg2,
+          MarketingImg3,
+          MarketingImg4,
+          MarketingImg5,
+          MarketingImg6,
+        ],
+        description: `Our performance marketing services focus on driving real growth with more leads, more sales, and better ROI. 
+        We run goal focused campaigns across Google, Meta, and more, with every ad tracked, tested, and optimized. Whether you are starting or scaling, 
+        we tailor strategies to fit your goals. Let your money work smarter and your business grow with results you can measure`,
+      },
+    ],
   },
-  features: [
-    {
-      img: "",
-      title: "",
-      desc: "",
-    },
-    {
-      img: "",
-      title: "",
-      desc: "",
-    },
-    {
-      img: "",
-      title: "",
-      desc: "",
-    },
-    {
-      img: "",
-      title: "",
-      desc: "",
-    },
-  ],
-  faqs: [
-    {
-      question: "What’s included in your SEO services?",
-      answer:
-        "Blog writing, website content, SEO copy, social media posts, email campaigns, and more.",
-    },
-    {
-      question: "How long does it take to see results?",
-      answer:
-        "Most websites begin seeing improvements in 3–6 months, depending on goals and competition.",
-    },
-    {
-      question: "Is ongoing SEO necessary?",
-      answer:
-        "Yes, search engines update regularly, so ongoing SEO keeps your site relevant and competitive.",
-    },
-    {
-      question: "Do you offer local SEO?",
-      answer:
-        "Yes, we help businesses rank for local searches and reach nearby customers effectively.",
-    },
-  ],
-  marketingSections: [
-    {
-      key: "seo",
-      title: "SEO Services",
-      images: [
-        SEOImg1, 
-        SEOImg2,
-        SEOImg3,
-        SEOImg4,
-        SEOImg5,
-        SEOImg6,
-      ],
-      description: `Our expert SEO services help you boost visibility, drive organic traffic, and grow steadily. We handle everything from smart keyword research and on-page fixes to technical SEO and quality backlinks. With regular tracking and strategies tailored just for you, we help businesses in Kochi and beyond stay ahead both locally and globally`,
-    },
-    {
-      key: "social",
-      title: "Social Media Marketing",
-      images: [
-        SocialImg1, 
-        SocialImg2,
-        SocialImg3,
-        SocialImg4,
-        SocialImg5,
-      ],
-      description: `We turn your social media into a powerful tool for brand growth. With smart strategies, creative storytelling, and AI insights, we create content that builds real connections and lasting loyalty. From high-performing reels to meaningful engagement, we help your brand stay top of mind on Instagram, Facebook, LinkedIn, and more. Ready to make an impact?`,
-    },
-    {
-      key: "marketing",
-      title: "Performance Marketing",
-      images: [
-        MarketingImg1,  
-        MarketingImg2,
-        MarketingImg3,
-        MarketingImg4,
-        MarketingImg5,
-        MarketingImg6,
-      ],
-      description: `Our performance marketing services focus on driving real growth with more leads, more sales, and better ROI. We run goal focused campaigns across Google, Meta, and more, with every ad tracked, tested, and optimized. Whether you are starting or scaling, we tailor strategies to fit your goals. Let your money work smarter and your business grow with results you can measure`,
-    },
-  ],
-},
 
-"Affiliate Partnership": {
-  title: "Affiliate Partnership",
-  desc: `Turn partnerships into profits with our smart affiliate marketing solutions. We help you build and manage a network of affiliates who promote your brand for performance-based rewards. From setting up tracking systems to onboarding the right partners, we handle the entire process. Our team ensures your offers, creatives, and commission models are optimized for results. Whether you’re looking to scale sales, increase traffic, or boost brand awareness, affiliate marketing offers low-risk, high-reward growth. Let your brand grow through partnerships that perform.`,
-  video:
-    "https://res.cloudinary.com/ddyymyvny/video/upload/v1761128678/Sequence_02_nyzubt.mp4",
-  whatMakes: {
-    title: " ",
-    desc: ``,
+  "Affiliate Partnership": {
+    title: "Affiliate Partnership",
+    desc: `Turn partnerships into profits with our smart affiliate marketing solutions. We help you build and manage a network of affiliates who promote your brand 
+    for performance-based rewards. From setting up tracking systems to onboarding the right partners, we handle the entire process. Our team ensures your offers, 
+    creatives, and commission models are optimized for results. Whether you’re looking to scale sales, increase traffic, or boost brand awareness, affiliate marketing 
+    offers low-risk, high-reward growth. Let your brand grow through partnerships that perform.`,
+    video:
+      "https://res.cloudinary.com/ddyymyvny/video/upload/v1761128678/Sequence_02_nyzubt.mp4",
+    whatMakes: {
+      title: " ",
+      desc: ``,
+    },
+    features: [
+      {
+        img: "",
+        title: "",
+        desc: "",
+      },
+      {
+        img: "",
+        title: "",
+        desc: "",
+      },
+      {
+        img: "",
+        title: "",
+        desc: "",
+      },
+      {
+        img: "",
+        title: "",
+        desc: "",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is affiliate marketing?",
+        answer:
+          "A performance-based marketing model where partners promote your products and earn a commission on sales.",
+      },
+      {
+        question: "What do your services include?",
+        answer:
+          "Affiliate setup, partner recruitment, tracking integration, offer strategy, and performance management.",
+      },
+      {
+        question: "Is it suitable for small businesses?",
+        answer:
+          "Yes, it’s a cost-effective way to grow without upfront ad spend.",
+      },
+      {
+        question: "How do you track results?",
+        answer:
+          "We use affiliate platforms and tools to track clicks, sales, and partner performance in real time.",
+      },
+    ],
+    marketingSections: [
+      {
+        key: "affiliate",
+        title: "Affiliate Marketing",
+        images: [AffiliateImg1],
+        description: `Grow your brand through smart partnerships. We help you build and manage a team of affiliates who promote your 
+        business and deliver real results. From tracking to finding the right partners, we handle it all so you can scale faster with less risk.`,
+      },
+      {
+        key: "support",
+        title: "360° Marketing Support",
+        images: [AffiliateImg2],
+        description: `Our 360° Digital Marketing service covers every touchpoint of your customer journey, combining strategy, creativity, and technology to deliver real results. 
+        From SEO, social media, and content marketing to performance ads, influencer campaigns, and automation — we create integrated solutions tailored to your brand and audience.`,
+      },
+      {
+        key: "influencer",
+        title: "Influencer Collaborations",
+        images: [AffiliateImg3],
+        description: `At Canary Digital AI, we connect your brand with the right niche influencers who truly resonate with your audience. 
+        Through authentic storytelling and smart affiliate links, we help you expand your reach, build genuine trust, and drive measurable growth. 
+        It is not just about visibility. It is about partnerships that perform.`,
+      },
+    ],
   },
-  features: [
-    {
-      img: "",
-      title: "",
-      desc: "",
-    },
-    {
-      img: "",
-      title: "",
-      desc: "",
-    },
-    {
-      img: "",
-      title: "",
-      desc: "",
-    },
-    {
-      img: "",
-      title: "",
-      desc: "",
-    },
-  ],
-  faqs: [
-    {
-      question: "What is affiliate marketing?",
-      answer:
-        "A performance-based marketing model where partners promote your products and earn a commission on sales.",
-    },
-    {
-      question: "What do your services include?",
-      answer:
-        "Affiliate setup, partner recruitment, tracking integration, offer strategy, and performance management.",
-    },
-    {
-      question: "Is it suitable for small businesses?",
-      answer:
-        "Yes, it’s a cost-effective way to grow without upfront ad spend.",
-    },
-    {
-      question: "How do you track results?",
-      answer:
-        "We use affiliate platforms and tools to track clicks, sales, and partner performance in real time.",
-    },
-  ],
-  marketingSections: [
-    {
-      key: "affiliate",
-      title: "Affiliate Marketing",
-      images: [
-        AffiliateImg1, 
-      ],
-      description: `Grow your brand through smart partnerships. We help you build and manage a team of affiliates who promote your business and deliver real results. From tracking to finding the right partners, we handle it all so you can scale faster with less risk.`,
-    },
-    {
-      key: "support",
-      title: "360° Marketing Support",
-      images: [
-        AffiliateImg2,
-      ],
-      description: `Our 360° Digital Marketing service covers every touchpoint of your customer journey, combining strategy, creativity, and technology to deliver real results. From SEO, social media, and content marketing to performance ads, influencer campaigns, and automation — we create integrated solutions tailored to your brand and audience.`,
-    },
-    {
-      key: "influencer",
-      title: "Influencer Collaborations",
-      images: [
-        AffiliateImg3,
-      ],
-      description: `At Canary Digital AI, we connect your brand with the right niche influencers who truly resonate with your audience. Through authentic storytelling and smart affiliate links, we help you expand your reach, build genuine trust, and drive measurable growth. It is not just about visibility. It is about partnerships that perform.`,
-    },
-  ],
-},
 };

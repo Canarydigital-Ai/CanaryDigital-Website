@@ -37,86 +37,87 @@ const HeroBrandsSection: React.FC = () => {
 
 
   return (
-    <section className="  px-4 md:px-14 py-10 pb-20 ">
-      <div className="space-y-24">
-        {/* Hero Text */}
-        <div className="flex items-start justify-between">
-          <div className="w-full max-w-7xl">
-            <h1 className="text-3xl md:text-4xl lg:text-[44px] font-light leading-[50px]">
-              Smart brands need smart marketing. We bring AI, design,
-              development, and automation together to{" "}
-              <span className="text-yellow-400 font-normal">
-                grow your business
-              </span>
-            </h1>
-          </div>
+<section className="px-4 md:px-14 py-10 pb-20">
+  <div className="space-y-16 md:space-y-24">
+    {/* Hero Text */}
+    <div className="flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-4">
+      <div className="w-full max-w-7xl">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-light leading-[1.2] sm:leading-[1.3] lg:leading-[50px]">
+          Smart brands need smart marketing. We bring AI, design,
+          development, and automation together to{" "}
+          <span className="text-yellow-400 font-normal">
+            grow your business
+          </span>
+        </h1>
+      </div>
 
-          {/* Circular Badge */}
-          <div className="flex items-center justify-center rounded-full w-[120px] h-[120px] text-amber-400 relative cursor-pointer"
-           onClick={scrollToProducts}
+      {/* Circular Badge */}
+      <div className="hidden md:flex items-center justify-center rounded-full w-[100px] h-[100px] sm:w-[110px] sm:h-[110px] lg:w-[120px] lg:h-[120px] text-amber-400 relative cursor-pointer self-center sm:self-start"
+        onClick={scrollToProducts}
+      >
+        <div className="absolute bottom-4 text-white rounded-full w-18 h-18 flex items-center justify-center">
+          <motion.div
+            animate={{
+              y: [0, -12, 0],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "backInOut",
+            }}
           >
-            <div className="absolute bottom-4 text-white rounded-full w-18 h-18 flex items-center justify-center">
-              <motion.div
-                animate={{
-                  y: [0, -12, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "backInOut",
-                }}
-              >
-                <HiArrowLongDown size={25} />
-              </motion.div>
-            </div>
+            <HiArrowLongDown size={20} className="sm:size-[22px] lg:size-[25px]" />
+          </motion.div>
+        </div>
 
-            {/* Circular Text Image with Rotation */}
-            <motion.img
-              src={RoundedText}
-              alt="Circular text"
-              className="absolute w-full h-full"
-              animate={{
-                rotate: 360,
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "linear",
-              }}
+        {/* Circular Text Image with Rotation */}
+        <motion.img
+          src={RoundedText}
+          alt="Circular text"
+          className="absolute w-full h-full"
+          animate={{
+            rotate: 360,
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+      </div>
+    </div>
+
+    {/* Brand Logos Grid */}
+    <div className="group relative max-w-2xl mx-auto py-4">
+      {/* Logo Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 items-center justify-items-center gap-6 md:gap-y-10 transition-all duration-500 ">
+        {brands.map((brand, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-center transition-all duration-300"
+          >
+            <img
+              src={brand.logo}
+              alt={brand.name}
+              className="object-contain w-full h-auto"
             />
           </div>
-        </div>
-
-        {/* Brand Logos Grid */}
-        <div className="group relative max-w-2xl mx-auto py-4">
-          {/* Logo Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 items-center justify-items-center gap-y-10 transition-all duration-500 ">
-            {brands.map((brand, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center transition-all duration-300"
-              >
-                <img
-                  src={brand.logo}
-                  alt={brand.name}
-                  className="  object-contain "
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Hover Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-xs">
-            <p 
-              onClick={() => navigate("/brands")}
-            className="text-lg md:text-xl font-light tracking-wide flex items-center gap-2 cursor-pointer">
-              Meet our Clients
-              <MdOutlineKeyboardArrowRight className="size-4" />
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
-    </section>
+
+      {/* Hover Overlay */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-xs">
+        <p 
+          onClick={() => navigate("/brands")}
+          className="text-base sm:text-lg md:text-xl font-light tracking-wide flex items-center gap-2 cursor-pointer"
+        >
+          Meet our Clients
+          <MdOutlineKeyboardArrowRight className="size-3 sm:size-4" />
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
   );
 };
 

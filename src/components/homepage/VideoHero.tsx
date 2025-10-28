@@ -3,7 +3,7 @@ import React from 'react';
 const VideoHero: React.FC = () => {
   return (
     <section className="relative w-full border-b border-[#242424] bg-[#000000]">
-      <div className="relative w-full h-[730px] overflow-hidden ">
+      <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[730px] overflow-hidden">
         <video
           className="w-full h-full object-cover"
           autoPlay

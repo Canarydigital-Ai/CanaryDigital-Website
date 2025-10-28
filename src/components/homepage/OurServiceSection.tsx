@@ -6,8 +6,11 @@ import ServiceImg2 from "../../assets/ServiceImg 2.png";
 import ServiceImg3 from "../../assets/ServiceImg 3.png";
 import ServiceImg4 from "../../assets/ServiceImg 4.png";
 import ServiceImg5 from "../../assets/ServiceImg 5.png";
+import { useNavigate } from "react-router-dom";
 
 const OurServiceSection: React.FC = () => {
+  const navigate = useNavigate();
+
   const cardData = [
     {
       number: "01",
@@ -26,7 +29,7 @@ const OurServiceSection: React.FC = () => {
     },
     {
       number: "04",
-      title: "Design and Creative",
+      title: "Design & Creative",
       image: ServiceImg4,
     },
     {
@@ -81,12 +84,15 @@ const OurServiceSection: React.FC = () => {
               </p>
 
               {/* Text Content */}
-              <div className="flex items-center space-x-6 relative z-10">
+              <div
+                className="flex items-center space-x-6 relative z-10"
+                onClick={() =>
+                  navigate("/services", { state: { selectedTab: card.title } })
+                }
+              >
                 <p className="text-[36px] font-normal leading-[55px]">
                   {card.title}
                 </p>
-                {/* <img src={Arrow3} alt="" className="mr-2 relative group-hover:-rotate-[35deg] transition-transform duration-400 " /> */}
-
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 412"

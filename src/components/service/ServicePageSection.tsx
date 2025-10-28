@@ -6,6 +6,7 @@ import UXImage1 from "../../assets/service images/uiux image 1.png";
 import UXImage2 from "../../assets/service images/uiux image 2.png";
 
 import { IoIosArrowDown } from "react-icons/io";
+import { useLocation } from "react-router-dom";
 
 type ServiceKey = keyof typeof serviceContentData;
 
@@ -23,7 +24,7 @@ interface DesignCreativeCardProps {
 }
 
 const tabs: ServiceKey[] = [
-  "AI-Powered Solutions",
+  "AI Powered Solutions",
   "Web Development",
   "UX/UI Designing",
   "Design & Creative",
@@ -32,9 +33,9 @@ const tabs: ServiceKey[] = [
 ];
 
 const ServicePageSection: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<ServiceKey>("Affiliate Partnership");
+  const [activeTab, setActiveTab] = useState<ServiceKey>("AI Powered Solutions");
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
+  const location = useLocation();
   const [marketingIndices, setMarketingIndices] = useState<{
     [key: string]: number;
   }>({});
@@ -82,6 +83,20 @@ const ServicePageSection: React.FC = () => {
       [key]: !prev[key],
     }));
   };
+
+  useEffect(() => {
+  if (location.state?.selectedTab) {
+    const tab = location.state.selectedTab;
+    const matchingTab = tabs.find(
+      (t) =>
+        t.toLowerCase().includes(tab.toLowerCase()) ||
+        tab.toLowerCase().includes(t.toLowerCase())
+    );
+    if (matchingTab) {
+      setActiveTab(matchingTab);
+    }
+  }
+}, [location.key, location.state]);
 
   // Reusable component
   const DesignCreativeCard = ({ item }: DesignCreativeCardProps) => (

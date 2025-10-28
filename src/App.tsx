@@ -1,19 +1,13 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BrandPage from './pages/brands/BrandPage';
-import ServicePage from './pages/services/ServicePage';
-// import Loader from './components/loader/Loader';
-
-// Lazy-loaded pages
+import ServicePage from './pages/services/ServicePage'; 
+ 
 const HomePage = lazy(() => import('./pages/home/HomePage'));
 
 const App: React.FC = () => {
   return (
-    <Router
-      // future={{
-      //   v7_startTransition: true,
-      //   v7_relativeSplatPath: true
-      // }}
+    <Router 
     >
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
