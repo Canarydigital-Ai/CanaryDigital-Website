@@ -40,29 +40,29 @@ const ToolsSlider: React.FC = () => {
 
   return (
     <div>
-      <div className="mb-16">
-        <h1 className="text-[18px] md:text-xl font-light relative w-fit">
+      <div className="mb-12 md:mb-16">
+        <h1 className="text-[16px] sm:text-[18px] md:text-xl font-light relative w-fit">
           Tools We Play with
-          <span className="w-[6px] h-[6px] bg-[#30CF00] rounded-full absolute top-1/2 -translate-y-1/2 -right-3"></span>
+          <span className="w-[4px] h-[4px] sm:w-[5px] sm:h-[5px] md:w-[6px] md:h-[6px] bg-[#30CF00] rounded-full absolute top-1/2 -translate-y-1/2 -right-2 sm:-right-3"></span>
         </h1>
       </div>
 
       <div className="relative overflow-hidden w-full ">
         {/* gradient blur */}
-        <div className="w-14 h-full bg-gradient-to-r from-[#000000] to-transparent absolute left-0 z-10"></div>
-        <div className="w-14 h-full bg-gradient-to-l from-[#000000] to-transparent absolute right-0 z-10"></div>
+        <div className="w-8 sm:w-10 md:w-12 lg:w-14 h-full bg-gradient-to-r from-[#000000] to-transparent absolute left-0 z-10"></div>
+        <div className="w-8 sm:w-10 md:w-12 lg:w-14 h-full bg-gradient-to-l from-[#000000] to-transparent absolute right-0 z-10"></div>
 
         <div className="animate-scroll flex w-max items-center">
           {/* Main set */}
           {tools.map((tool) => (
             <div
               key={tool.id}
-              className="flex flex-col items-center justify-center mx-8 md:mx-12"
+              className="flex flex-col items-center justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-12"
             >
               <img
                 src={tool.image}
                 alt={tool.name}
-                className="w-20 h-20 lg:w-auto lg:h-auto object-contain mb-2"
+                className="w-14 h-14 md:w-20 md:h-20 lg:w-auto lg:h-auto object-contain mb-1 sm:mb-2"
               />
             </div>
           ))}
@@ -71,12 +71,12 @@ const ToolsSlider: React.FC = () => {
           {tools.map((tool) => (
             <div
               key={`dup-${tool.id}`}
-              className="flex flex-col items-center justify-center mx-8 md:mx-12"
+              className="flex flex-col items-center justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-12"
             >
               <img
                 src={tool.image}
                 alt={tool.name}
-                className="w-20 h-20 lg:w-auto lg:h-auto object-contain mb-2"
+                className="w-14 h-14 md:w-20 md:h-20 lg:w-auto lg:h-auto object-contain mb-1 sm:mb-2"
               />
             </div>
           ))}

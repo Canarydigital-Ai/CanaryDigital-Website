@@ -58,7 +58,7 @@ const AdvantagesSection: React.FC = () => {
 
   return (
     <div
-      className="text-white px-4 md:px-10 lg:px-16 py-20 pb-36 min-h-screen flex flex-col relative"
+      className="text-white px-4 md:px-10 lg:px-16 py-16 md:py-20 pb-18 md:pb-36 flex flex-col relative"
       style={{
         borderTop: "1px solid transparent",
         borderImage:
@@ -66,22 +66,22 @@ const AdvantagesSection: React.FC = () => {
       }}
     >
       {/* Header */}
-      <div className="flex w-full justify-between items-center mb-28">
-        <h2 className="text-[18px] md:text-[22px] xl:text-[32px] font-light relative w-full max-w-[460px] leading-[42px]">
+      <div className="flex w-full justify-between items-center mb-10 md:mb-28">
+        <h2 className="text-[16px] sm:text-[18px] md:text-[22px] xl:text-[32px] font-light relative w-full max-w-full md:max-w-[460px] leading-[1.3] sm:leading-[1.4] md:leading-[42px]">
           Discover the Key <span className="text-[#FBCA0C]">Advantages</span> of
           Choosing Canary Digital.AI
         </h2>
       </div>
 
       {/* Advantages Slider */}
-      <Slider ref={sliderRef} {...settings} className="w-full mb-28">
+      <Slider ref={sliderRef} {...settings} className="w-full mb-10 md:mb-28">
         {advantages.map((item) => (
-          <div key={item.id} className="pr-5">
-            <div className="space-y-10 space-x-20">
-              <h2 className="text-6xl lg:text-[128px] font-medium border-b border-[#565656] pb-4">
+          <div key={item.id} className="pr-3 md:pr-5">
+            <div className="space-y-6 md:space-y-10">
+              <h2 className="text-[40px] sm:text-[50px] md:text-[60px] lg:text-[80px] xl:text-[128px] font-medium border-b border-[#565656] pb-3 md:pb-4">
                 {item.number}
               </h2>
-              <h3 className="text-2xl font-medium leading-[27px]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-medium leading-[1.3] sm:leading-[1.4] md:leading-[27px]">
                 {item.title.includes("&") ? (
                   <>
                     {item.title.split("&")[0]} & <br />
@@ -91,7 +91,7 @@ const AdvantagesSection: React.FC = () => {
                   item.title
                 )}
               </h3>
-              <p className="text-base text-[#C9C9C9] leading-[25px] w-full max-w-[400px]">
+              <p className="text-sm md:text-base text-[#C9C9C9] leading-[1.4] md:leading-[25px] w-full max-w-full md:max-w-[400px]">
                 {item.description}
               </p>
             </div>

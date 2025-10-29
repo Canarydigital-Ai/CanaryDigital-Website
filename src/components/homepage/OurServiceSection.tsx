@@ -40,31 +40,31 @@ const OurServiceSection: React.FC = () => {
   ];
 
   return (
-    <div className=" text-white px-4 md:px-10 lg:px-16 py-22 min-h-screen flex flex-col relative">
+    <div className="text-white px-4 md:px-10 lg:px-16 py-16 md:py-22 min-h-screen flex flex-col relative">
       {/* Header */}
-      <div className="flex w-full justify-between items-center mb-20">
-        <div className="flex items-center gap-4">
-          <h1 className="text-[18px] md:text-[22px] font-light relative">
+      <div className="flex flex-col lg:flex-row w-full justify-between items-start lg:items-center mb-12 md:mb-20 gap-6 md:gap-4">
+        <div className="flex items-center gap-3 md:gap-4">
+          <h1 className="text-[16px] sm:text-[18px] md:text-[22px] font-light relative">
             Our Services
-            <span className="w-[6px] h-[6px] bg-[#30CF00] rounded-full absolute top-1/2 -translate-y-1/2 -right-3"></span>
+            <span className="w-[4px] h-[4px] sm:w-[5px] sm:h-[5px] md:w-[6px] md:h-[6px] bg-[#30CF00] rounded-full absolute top-1/2 -translate-y-1/2 -right-2 sm:-right-3"></span>
           </h1>
           <img
             src={BirdGIF}
             alt="bird"
-            className="w-[50px] h-[50px] object-contain"
+            className="w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] object-contain"
           />
         </div>
 
-        {/* Arrow Controls — stays at top-right */}
+        {/* Description */}
         <div className="flex items-center gap-3">
-          <h2 className="text-2xl leading-[31px] w-full max-w-[625px]">
+          <h2 className="text-lg sm:text-xl md:text-2xl leading-[1.3] sm:leading-[1.4] md:leading-[31px] w-full max-w-full lg:max-w-[625px]">
             Smart solutions across AI, design, development, video, and marketing
             built to elevate your brand and deliver results
           </h2>
         </div>
       </div>
 
-      <div className="space-y-5 mt-10 mb-24">
+      <div className="space-y-4 md:space-y-5 mt-8 md:mt-10 mb-8 md:mb-24">
         {cardData.map((card, index) => {
           return (
             <motion.div
@@ -76,27 +76,27 @@ const OurServiceSection: React.FC = () => {
                 ease: "backInOut",
               }}
               key={index}
-              className="group relative flex items-center justify-between border-b border-[#5e5e5ecc] pt-4 pb-10 cursor-pointer w-full "
+              className="group relative flex items-center justify-between border-b border-[#5e5e5ecc] pt-3 md:pt-4 pb-6 md:pb-10 cursor-pointer w-full"
             >
               {/* Number */}
-              <p className="text-[35px] font-medium leading-[55px]">
+              <p className="text-[24px] sm:text-[28px] md:text-[35px] font-medium leading-[1.2] sm:leading-[45px] md:leading-[55px]">
                 {card.number}/
               </p>
 
               {/* Text Content */}
               <div
-                className="flex items-center space-x-6 relative z-10"
+                className="flex items-center space-x-4 md:space-x-6 relative z-10"
                 onClick={() =>
                   navigate("/services", { state: { selectedTab: card.title } })
                 }
               >
-                <p className="text-[36px] font-normal leading-[55px]">
+                <p className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[36px] font-normal leading-[1.3] sm:leading-[40px] md:leading-[50px] lg:leading-[55px] text-right md:text-left">
                   {card.title}
                 </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 412"
-                  className="w-7 h-7 mr-2 relative group-hover:-rotate-[35deg] group-hover:stroke-[#FBCA0C] transition-transform duration-400"
+                  className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 mr-1 md:mr-2 relative group-hover:-rotate-[35deg] group-hover:stroke-[#FBCA0C] transition-transform duration-400"
                   fill="none"
                   stroke="white"
                   strokeWidth="30"
@@ -109,7 +109,7 @@ const OurServiceSection: React.FC = () => {
               </div>
 
               {/* Hover Image (LEFT SIDE NOW) */}
-              <div className="absolute left-20 top-12 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div className="hidden md:block absolute left-16 lg:left-20 top-8 md:top-12 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div
                   className={`w-full h-full overflow-hidden transform  ${
                     index % 2 === 0
@@ -120,7 +120,7 @@ const OurServiceSection: React.FC = () => {
                   <img
                     src={card.image}
                     alt={`${card.title} Preview`}
-                    className="w-full h-full object-cover "
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>

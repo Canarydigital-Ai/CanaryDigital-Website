@@ -78,15 +78,15 @@ const BrandSection: React.FC = () => {
   ];
 
   return (
-    <div className=" text-white px-4 md:px-10 lg:px-16 py-20 pb-40 min-h-screen flex flex-col relative">
-      <div className="flex gap-6">
-        <div className="flex flex-col w-full max-w-[420px] space-y-6">
-          <h2 className="text-[18px] md:text-[22px] xl:text-[32px] font-light relative w-full max-w-[280px] leading-[38px]">
+    <div className="text-white px-4 md:px-10 lg:px-16 py-16 md:py-20 pb-24 md:pb-40 min-h-screen flex flex-col relative">
+      <div className="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-6">
+        <div className="flex flex-col w-full lg:max-w-[420px] space-y-4 md:space-y-6">
+          <h2 className="text-[16px] sm:text-[18px] md:text-[22px] lg:text-[32px] font-light relative w-full max-w-full lg:max-w-[280px] leading-[1.3] sm:leading-[1.4] md:leading-[38px]">
             Brands That
             <span className="text-[#FBCA0C]"> Partnered With Us</span>
           </h2>
 
-          <p className="text-lg text-[#C9C9C9] leading-[20px] w-full max-w-[400px]">
+          <p className="text-base sm:text-lg text-[#C9C9C9] leading-[1.4] sm:leading-[20px] w-full max-w-full lg:max-w-[400px]">
             From startups to established leaders - Explore the brands that
             trusted us to spark real growth.
           </p>
@@ -94,7 +94,7 @@ const BrandSection: React.FC = () => {
 
         {/* right section */}
         <div className="flex-1">
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-x-6 gap-y-14 justify-items-center items-center relative" >
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 md:gap-x-6 gap-y-8 md:gap-y-14 justify-items-center items-center relative">
             {brandLogos.map((logo, index) => (
               <div
                 key={index}
@@ -103,17 +103,17 @@ const BrandSection: React.FC = () => {
                 <img
                   src={logo}
                   alt={`Client ${index + 1}`}
-                  className="object-contain w-auto h-auto opacity-90 hover:opacity-100 transition duration-300"
+                  className="object-contain w-auto h-auto max-w-[80px] sm:max-w-[100px] md:max-w-none opacity-90 hover:opacity-100 transition duration-300"
                 />
               </div>
             ))}
 
-            {/* Column Dividers */}
-            <div className="absolute top-0 left-[16.66%] w-px h-full bg-[#1a1a1a]"></div>
-            <div className="absolute top-0 left-[33.33%] w-px h-full bg-[#1a1a1a]"></div>
-            <div className="absolute top-0 left-[50%] w-px h-full bg-[#1a1a1a]"></div>
-            <div className="absolute top-0 left-[66.66%] w-px h-full bg-[#1a1a1a]"></div>
-            <div className="absolute top-0 left-[83.33%] w-px h-full bg-[#1a1a1a]"></div>
+            {/* Column Dividers - Hidden on mobile, visible on desktop */}
+            <div className="hidden lg:block absolute top-0 left-[16.66%] w-px h-full bg-[#1a1a1a]"></div>
+            <div className="hidden lg:block absolute top-0 left-[33.33%] w-px h-full bg-[#1a1a1a]"></div>
+            <div className="block absolute top-0 left-[50%] w-px h-full bg-[#1a1a1a]"></div>
+            <div className="hidden lg:block absolute top-0 left-[66.66%] w-px h-full bg-[#1a1a1a]"></div>
+            <div className="hidden lg:block absolute top-0 left-[83.33%] w-px h-full bg-[#1a1a1a]"></div>
           </div>
         </div>
       </div>
