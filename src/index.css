@@ -125,3 +125,18 @@ body {
   pointer-events: none;
 }
 
+
+
+@keyframes infiniteSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+.animate-infinite-slide {
+  display: flex;
+  animation: infiniteSlide 4s linear infinite; 
+}
