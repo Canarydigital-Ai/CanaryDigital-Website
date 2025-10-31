@@ -78,7 +78,7 @@ const BrandSection: React.FC = () => {
   ];
 
   return (
-    <div className="text-white px-4 md:px-10 lg:px-16 py-16 md:py-20 pb-24 md:pb-40 min-h-screen flex flex-col relative">
+    <div className="px-4 md:px-10 lg:px-16 py-16 md:py-20 pb-24 md:pb-40 min-h-screen flex flex-col relative">
       <div className="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-6">
         <div className="flex flex-col w-full lg:max-w-[420px] space-y-4 md:space-y-6">
           <h2 className="text-[16px] sm:text-[18px] md:text-[22px] lg:text-[32px] font-light relative w-full max-w-full lg:max-w-[280px] leading-[1.3] sm:leading-[1.4] md:leading-[38px]">

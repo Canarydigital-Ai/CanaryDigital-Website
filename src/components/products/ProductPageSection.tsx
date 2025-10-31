@@ -21,7 +21,8 @@ const items = [
   { img: LeftGIF4, label: "E-commerce owners" },
 ];
 
-const SeoVideo = "https://res.cloudinary.com/ddyymyvny/video/upload/v1761825558/Seo_Vido_qaa5of.mp4";
+const SeoVideo =
+  "https://res.cloudinary.com/ddyymyvny/video/upload/v1761825558/Seo_Vido_qaa5of.mp4";
 
 const ProductPageSection: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -29,12 +30,12 @@ const ProductPageSection: React.FC = () => {
 
   const handlePlay = () => {
     setIsPlaying(true);
-    setTimeout(() => videoRef.current?.play(), 100);  
+    setTimeout(() => videoRef.current?.play(), 100);
   };
-
 
   return (
     <div className="bg-[#0A0A0A]">
+      {/* main banner section */}
       <div
         className="h-screen flex flex-col justify-center items-start relative px-4 md:px-10 lg:px-16"
         style={{
@@ -43,16 +44,19 @@ const ProductPageSection: React.FC = () => {
         }}
       >
         {/* Content */}
-        <div className="relative space-y-8 px-4 sm:px-6 w-full max-w-[640px] mt-60">
-          <h2 className=" text-[54px] leading-[60px] ">
+        <div className="relative space-y-6 sm:space-y-8 px-4 sm:px-6 w-full max-w-full sm:max-w-[540px] md:max-w-[640px] mt-40 sm:mt-48 md:mt-60">
+          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-[1.2] sm:leading-[1.3] md:leading-[56px] lg:leading-[60px]">
             AI Assistant to Audit, Optimize & Grow
           </h2>
-          <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-light leading-[22px] lg:leading-[25px] text-[#999999]">
-            Experience smarter SEO with Canary Digital’s AI driven solution -
+          <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-light leading-[1.4] sm:leading-[20px] md:leading-[22px] lg:leading-[25px] text-[#999999]">
+            Experience smarter SEO with Canary Digital's AI driven solution -
             built to uncover opportunities, enhance visibility, and drive
             measurable results
           </p>
-          <button className="group bg-[#FBCA0C] text-black text-xs font-normal leading-[23px] px-4 md:px-6 h-[28px] md:h-[30px] rounded-md flex items-center justify-center gap-2 overflow-hidden relative transition-all duration-600 cursor-pointer w-fit">
+          <button
+            onClick={() => window.open("https://www.canaryseo.site/", "_blank")}
+            className="group bg-[#FBCA0C] text-black text-xs font-normal leading-[23px] px-4 md:px-6 h-[28px] md:h-[30px] rounded-md flex items-center justify-center gap-2 overflow-hidden relative transition-all duration-600 cursor-pointer w-fit"
+          >
             <span className="flex items-center gap-2 transition-all duration-500 ease-out group-hover:-translate-x-60 group-hover:opacity-0">
               Start free scan{" "}
             </span>
@@ -65,37 +69,38 @@ const ProductPageSection: React.FC = () => {
       </div>
 
       <div
-        className="px-4 md:px-10 lg:px-16 py-12 sm:py-16 md:py-24 pb-20 md:pb-36 bg-[#0A0A0A] mt-24 text-white"
+        className="px-4 md:px-10 lg:px-16 py-12 sm:py-16 md:py-24 pb-20 md:pb-36 bg-[#0A0A0A] mt-16 sm:mt-20 md:mt-24 text-white"
         style={{
           borderTop: "1px solid transparent",
           borderImage:
             "linear-gradient(90deg, #000000 0%, #898989 50%, #000000 100%) 1",
         }}
       >
-        <div className="grid md:grid-cols-3 gap-18 items-start pb-28">
+        {/* Content */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-16 md:gap-18 items-start pb-10 md:pb-28">
           {/* LEFT SIDE */}
-          <div className="space-y-16">
-            <h2 className="text-3xl md:text-4xl xl:text-[54px] leading-[64px]">
+          <div className="space-y-12 sm:space-y-14 md:space-y-16">
+            <h2 className="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[48px] xl:text-[54px] leading-[1.2] sm:leading-[1.3] md:leading-[50px] lg:leading-[60px] xl:leading-[64px]">
               What is Canary SEO and Who is it For
             </h2>
-            <p className="text-lg leading-[30px] ">
+            <p className="text-base sm:text-lg leading-[1.4] sm:leading-[26px] md:leading-[28px] lg:leading-[30px]">
               Canary SEO is an AI-powered tool that quickly analyzes your
-              website and highlights what’s affecting your search rankings.
-              You’ll get a free summary with key SEO insights. If you want
+              website and highlights what's affecting your search rankings.
+              You'll get a free summary with key SEO insights. If you want
               deeper reports like keyword data and technical fixes, you can
-              upgrade anytime. It’s simple, clear, and built to help you grow
+              upgrade anytime. It's simple, clear, and built to help you grow
               online, no guesswork needed
             </p>
 
-            <div className="grid grid-cols-2 gap-6 text-gray-200">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 text-gray-200">
               {items.map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <img
                     src={item.img}
                     alt={item.label}
-                    className="w-[55px] h-[55px]"
+                    className="w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] md:w-[55px] md:h-[55px]"
                   />
-                  <p className="text-xl leading-[34px] font-medium">
+                  <p className="text-lg sm:text-xl leading-[1.3] sm:leading-[30px] md:leading-[34px] font-medium">
                     {item.label}
                   </p>
                 </div>
@@ -104,63 +109,71 @@ const ProductPageSection: React.FC = () => {
           </div>
 
           {/* RIGHT SIDE: INFO CARDS */}
-          <div className="col-span-2 flex flex-col gap-3">
-            <div className="flex h-[345px] gap-3">
-              <div className="bg-[#1F1F1F] w-[435px] p-8 flex flex-col justify-between items-start rounded-md">
-                <h2 className="text-2xl leading-[30px] font-semibold w-full max-w-[300px]">
+          <div className="col-span-1 md:col-span-2 flex flex-col gap-3 ">
+            <div className="flex flex-col sm:flex-row h-auto sm:h-[345px] gap-3 ">
+              <div className="bg-[#1F1F1F] w-full sm:w-[435px] p-6 sm:p-8 flex flex-col justify-between items-start rounded-md">
+                <h2 className="text-xl sm:text-2xl leading-[1.3] sm:leading-[30px] font-semibold w-full max-w-full sm:max-w-[300px]">
                   Smart Fix Recommendations
                 </h2>
-                <p className="text-base leading-[22px] font-light w-full max-w-[300px] text-[#DBDBDB]">
+                <p className="text-sm sm:text-base leading-[1.4] sm:leading-[22px] font-light w-full max-w-full sm:max-w-[300px] text-[#DBDBDB] mt-4 sm:mt-0">
                   Get simple, clear suggestions to fix issues and boost your
-                  site’s performance. Ask ChatGPT
+                  site's performance. Ask ChatGPT
                 </p>
-                <div className="w-full flex justify-end">
-                  <img src={RightGIF1} alt="" />
+                <div className="w-full flex justify-center md:justify-end mt-4 sm:mt-0">
+                  <img
+                    src={RightGIF1}
+                    alt=""
+                    className="w-20 h-20 sm:w-auto sm:h-auto"
+                  />
                 </div>
               </div>
 
-              <div className="bg-[#1F1F1F] flex-1  p-8 flex items-start justify-between rounded-md">
-                <div className="space-y-5">
-                  <h2 className="text-2xl leading-[30px] font-semibold w-full max-w-[300px]">
+              <div className="bg-[#1F1F1F] flex-1 p-6 sm:p-8 flex flex-col sm:flex-row items-start justify-between rounded-md gap-4 sm:gap-0">
+                <div className="space-y-4 sm:space-y-5">
+                  <h2 className="text-xl sm:text-2xl leading-[1.3] sm:leading-[30px] font-semibold w-full max-w-full sm:max-w-[300px]">
                     AI-powered Issue Detection
                   </h2>
-                  <p className="text-base leading-[22px] font-light w-full max-w-[270px]  text-[#DBDBDB]">
-                    Spots what’s wrong with your website instantly and
-                    intelligently, so you don’t have to dig through the code
+                  <p className="text-sm sm:text-base leading-[1.4] sm:leading-[22px] font-light w-full max-w-full sm:max-w-[270px] text-[#DBDBDB]">
+                    Spots what's wrong with your website instantly and
+                    intelligently, so you don't have to dig through the code
                   </p>
                 </div>
-                <img src={RightGIF2} alt="" className=" h-[250px] w-[250px]" />
+                <img
+                  src={RightGIF2}
+                  alt=""
+                  className="h-[120px] w-[120px] sm:h-[180px] sm:w-[180px] md:h-[200px] md:w-[200px] lg:h-[250px] lg:w-[250px] self-center sm:self-auto"
+                />
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-3 w-full  ">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3  w-full">
               {/* Card 1 */}
-              <div className="bg-[#1F1F1F] rounded-md p-8 flex flex-col justify-between space-y-5 items-center">
-                <div className="space-y-6">
-                  <h2 className="text-2xl leading-[30px] font-semibold w-full max-w-[200px]">
+              <div className="bg-[#1F1F1F] rounded-md p-6 sm:p-8 flex flex-col justify-between space-y-4 sm:space-y-5 items-center">
+                <div className="space-y-4 sm:space-y-6">
+                  <h2 className="text-xl sm:text-2xl leading-[1.3] sm:leading-[30px] font-semibold w-full max-w-full sm:max-w-[200px] text-left">
                     Real-time Site Health Score
                   </h2>
-                  <p className="text-base leading-[22px] font-light w-full max-w-[270px]  text-[#DBDBDB]">
-                    Check your website’s overall health in real time with a
+                  <p className="text-sm sm:text-base leading-[1.4] sm:leading-[22px] font-light w-full max-w-full sm:max-w-[270px] text-[#DBDBDB] text-left">
+                    Check your website's overall health in real time with a
                     clear, simple score
                   </p>
                 </div>
                 <img
                   src={RightGIF3}
                   alt=""
-                  className="h-[220px] object-contain"
+                  className="h-[120px] sm:h-[150px] md:h-[180px] lg:h-[220px] object-contain"
                 />
               </div>
 
-              <div className="w-full col-span-2 flex flex-col gap-3">
-                <div className="bg-[#1F1F1F]  w-full p-8 flex items-center justify-between rounded-md">
-                  <div className="space-y-5">
-                    <h2 className="text-2xl leading-[30px] font-semibold w-full max-w-[200px]">
+              <div className="col-span-1 sm:col-span-2 flex flex-col gap-3 ">
+                <div className="bg-[#1F1F1F] w-full p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between rounded-md gap-4 sm:gap-0">
+                  <div className="space-y-4 sm:space-y-5">
+                    <h2 className="text-xl sm:text-2xl leading-[1.3] sm:leading-[30px] font-semibold w-full max-w-full sm:max-w-[200px]">
                       Competitor Comparison
                     </h2>
-                    <p className="text-base leading-[22px] font-light w-full max-w-[270px]  text-[#DBDBDB]">
+                    <p className="text-sm sm:text-base leading-[1.4] sm:leading-[22px] font-light w-full max-w-full sm:max-w-[270px] text-[#DBDBDB]">
                       See how your website stacks up against others in your
-                      industry{" "}
+                      industry
                     </p>
                   </div>
                   <video
@@ -168,74 +181,124 @@ const ProductPageSection: React.FC = () => {
                     autoPlay
                     loop
                     muted
-                    className="w-[155px] h-[155px]"
+                    className="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[140px] md:h-[140px] lg:w-[155px] lg:h-[155px]"
                   ></video>
                 </div>
 
-                <div className="bg-[#1F1F1F]  w-full p-8 flex items-center justify-between rounded-md">
-                  <div className="space-y-5">
-                    <h2 className="text-2xl leading-[30px] font-semibold w-full max-w-[200px]">
+                <div className="bg-[#1F1F1F] w-full p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between rounded-md gap-4 sm:gap-0">
+                  <div className="space-y-4 sm:space-y-5">
+                    <h2 className="text-xl sm:text-2xl leading-[1.3] sm:leading-[30px] font-semibold w-full max-w-full sm:max-w-[200px]">
                       Exportable SEO Reports
                     </h2>
-                    <p className="text-base leading-[22px] font-light w-full max-w-[270px]  text-[#DBDBDB]">
+                    <p className="text-sm sm:text-base leading-[1.4] sm:leading-[22px] font-light w-full max-w-full sm:max-w-[270px] text-[#DBDBDB]">
                       Download and share your full SEO report anytime you need
                       it
                     </p>
                   </div>
-                  <img src={RightGIF5} alt="" className="" />
+                  <img
+                    src={RightGIF5}
+                    alt=""
+                    className="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-auto md:h-auto"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="pt-28 grid grid-cols-3">
-<div className="relative col-span-2">
-      {/* Thumbnail (fades out when playing) */}
-      <img
-        src={Thumbnail}
-        alt="SEO Thumbnail"
-        className={`w-full h-auto object-cover absolute inset-0 transition-opacity duration-700 ease-in-out ${
-          isPlaying ? "opacity-0" : "opacity-100"
-        }`}
-      />
+        {/* demo video section */}
+        <div className="pt-16 sm:pt-20 md:pt-28 grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-5">
+          <div className="relative col-span-1 lg:col-span-2">
+            {/* Thumbnail (fades out when playing) */}
+            <img
+              src={Thumbnail}
+              alt="SEO Thumbnail"
+              className={`w-full h-auto object-cover absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                isPlaying ? "opacity-0" : "opacity-100"
+              }`}
+            />
 
-      {/* Video (fades in when playing) */}
-      <video
-        ref={videoRef}
-        src={SeoVideo}
-        className={`w-full h-auto object-cover transition-opacity duration-700 ease-in-out ${
-          isPlaying ? "opacity-100" : "opacity-0"
-        }`}
-        onEnded={() => setIsPlaying(false)}
-      />
+            {/* Video (fades in when playing) */}
+            <video
+              ref={videoRef}
+              src={SeoVideo}
+              className={`w-full h-auto object-cover transition-opacity duration-700 ease-in-out ${
+                isPlaying ? "opacity-100" : "opacity-0"
+              }`}
+              onEnded={() => setIsPlaying(false)}
+            />
 
-      {/* Center play button */}
-      {!isPlaying && (
-        <button
-          onClick={handlePlay}
-          className="text-white w-[120px] h-[120px] rounded-full flex justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500"
-          style={{
-            background: "linear-gradient(180deg, #FBCA0C 0%, #DADADA 100%)",
-            boxShadow: `
-              0px 0px 11.7px 0px #FFFFFF,
-              0px 0px 23.4px 0px #FFFFFF,
-              0px 0px 81.9px 0px #FFFFFF,
-              0px 0px 163.8px 0px #FFFFFF,
-              0px 0px 250px 0px #FFFFFF
-            `,
-          }}
-        >
-          <FaPlay className="size-10 " />
-        </button>
-      )}
+            {/* Center play button */}
+            {!isPlaying && (
+              <button
+                onClick={handlePlay}
+                className="text-white w-[45px] h-[45px] md:w-[120px] md:h-[120px] rounded-full flex justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500"
+                style={{
+                  background:
+                    "linear-gradient(180deg, #FBCA0C 0%, #DADADA 100%)",
+                  boxShadow: `
+                0px 0px 11.7px 0px #FFFFFF,
+                0px 0px 23.4px 0px #FFFFFF,
+                0px 0px 81.9px 0px #FFFFFF,
+                0px 0px 163.8px 0px #FFFFFF,
+                0px 0px 250px 0px #FFFFFF
+              `,
+                }}
+              >
+                <FaPlay className="size-4 md:size-10 ml-1" />
+              </button>
+            )}
 
-      {/* Bottom gradient overlay */}
-      {!isPlaying && (
-        <div className="w-full h-[300px] bg-gradient-to-b from-transparent to-[#0A0A0A] absolute bottom-0 pointer-events-none transition-opacity duration-700 ease-in-out"></div>
-      )}
-    </div>
+            {/* Bottom gradient overlay */}
+            {!isPlaying && (
+              <div className="w-full h-[150px] sm:h-[200px] md:h-[250px] lg:h-[300px] bg-gradient-to-b from-transparent to-[#0A0A0A] absolute bottom-0 pointer-events-none transition-opacity duration-700 ease-in-out"></div>
+            )}
+          </div>
 
+          <div className="flex flex-col items-center justify-center w-full lg:w-fit mx-auto space-y-6 sm:space-y-8 relative">
+            {/* Title */}
+            <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-light leading-[1.3] sm:leading-[36px] md:leading-[42px] w-full max-w-full lg:max-w-[305px] text-center lg:text-left">
+              See how Canary SEO simplifies audits
+            </h2>
+
+            {/* Flow container */}
+            <div className="relative flex flex-col items-center space-y-6 sm:space-y-8 md:space-y-10 w-full">
+              {/* Dotted line */}
+              <div className="absolute top-0 bottom-0 left-1/2 w-px border-l-2 border-dotted border-[#7E7E7E] -translate-x-1/2 z-0"></div>
+
+              {/* Steps */}
+              {[
+                "Click 'Start Free Scan'",
+                "Enter the website URL",
+                "View basic SEO results instantly",
+                "Explore premium insights (blurred or locked)",
+                "Upgrade to unlock the full report",
+              ].map((text, index) => (
+                <div
+                  key={index}
+                  className="relative z-10 bg-[#1F1F1F] rounded-md px-4 sm:px-6 md:px-8 lg:px-12 w-full max-w-[280px] sm:max-w-[300px] h-[55px] sm:h-[60px] md:h-[65px] flex items-center justify-center text-center text-xs sm:text-sm leading-[1.4] sm:leading-[20px]"
+                >
+                  {text}
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <button
+              onClick={() =>
+                window.open("https://www.canaryseo.site/", "_blank")
+              }
+              className="mt-2 sm:mt-4 group bg-[#FBCA0C] text-black text-xs font-normal leading-[23px] px-4 md:px-6 h-[28px] md:h-[30px] rounded-md flex items-center justify-center gap-2 overflow-hidden relative transition-all duration-600 cursor-pointer w-fit"
+            >
+              <span className="flex items-center gap-2 transition-all duration-500 ease-out group-hover:-translate-x-60 group-hover:opacity-0">
+                Start free scan{" "}
+              </span>
+
+              <span className="absolute flex items-center gap-2 transition-all duration-500 ease-out transform opacity-0 translate-x-40 group-hover:translate-x-0 group-hover:opacity-100">
+                Start free scan{" "}
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

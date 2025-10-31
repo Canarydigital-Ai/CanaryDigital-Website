@@ -3,8 +3,12 @@ import React from "react";
 import Shape1 from "../../assets/videos/shape 1.mp4";
 import Shape2 from "../../assets/videos/shape 2.mp4";
 import Shape3 from "../../assets/videos/shape 3.mp4";
+import { useNavigate } from "react-router-dom";
 
 const WorksSection: React.FC = () => {
+  const navigate = useNavigate();
+
+
   const WorkVideo1 =
     "https://res.cloudinary.com/ddyymyvny/video/upload/v1760790731/ug_mocktail5_rkiaoy.mp4";
   const WorkVideo2 =
@@ -29,7 +33,10 @@ const WorksSection: React.FC = () => {
             <span className="w-[4px] h-[4px] sm:w-[5px] sm:h-[5px] md:w-[6px] md:h-[6px] bg-[#30CF00] rounded-full absolute top-1/2 -translate-y-1/2 -right-2 sm:-right-3"></span>
           </h1>
 
-          <button className="group bg-[#FBCA0C] text-black text-xs font-normal leading-[23px] px-4 md:px-6 h-[28px] md:h-[30px] rounded-md flex items-center justify-center gap-2 overflow-hidden relative transition-all duration-600 cursor-pointer w-fit">
+          <button
+            onClick={() => navigate("/portfolio")}
+            className="group bg-[#FBCA0C] text-black text-xs font-normal leading-[23px] px-4 md:px-6 h-[28px] md:h-[30px] rounded-md flex items-center justify-center gap-2 overflow-hidden relative transition-all duration-600 cursor-pointer w-fit"
+          >
             {/* Original text that moves left */}
             <span className="flex items-center gap-2 transition-all duration-500 ease-out group-hover:-translate-x-60 group-hover:opacity-0">
               View Portfolio{" "}
@@ -41,7 +48,7 @@ const WorksSection: React.FC = () => {
             </span>
           </button>
         </div>
- 
+
         <div className="flex flex-col sm:flex-row justify-center items-start sm:items-center gap-4 md:gap-6 w-full lg:w-auto">
           <div className="flex items-center gap-1 md:gap-2">
             {[Shape2, Shape1, Shape3].map((shape, i) => (

@@ -1,13 +1,14 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
 import ProductsPage from './pages/products/ProductsPage';
+import CaseStudiesPage from './pages/casestudies/CaseStudiesPage';
  
 const HomePage = lazy(() => import('./pages/home/HomePage'));
 const BrandPage = lazy(() => import('./pages/brands/BrandPage'));
 const ServicePage = lazy(() => import('./pages/services/ServicePage'));
 const PortfolioPage = lazy(() => import('./pages/portfolio/PortfolioPage'));
 const BlogsPage = lazy(() => import('./pages/blogs/BlogsPage'));
-const IndustryServePage = lazy(() => import('./pages/industry/IndustryServePage'));
+const IndustryServePage = lazy(() => import('./pages/about/IndustryServePage'));
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: React.FC = () => {
           <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/industries-we-serve" element={<IndustryServePage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/case-studies" element={<CaseStudiesPage />} />
         </Routes>
       </Suspense>
     </Router>
