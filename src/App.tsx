@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
 import ProductsPage from './pages/products/ProductsPage';
 import CaseStudiesPage from './pages/casestudies/CaseStudiesPage';
+import CaseStudySinglePage from './pages/casestudies/CaseStudySinglePage';
  
 const HomePage = lazy(() => import('./pages/home/HomePage'));
 const BrandPage = lazy(() => import('./pages/brands/BrandPage'));
@@ -24,6 +25,7 @@ const App: React.FC = () => {
           <Route path="/industries-we-serve" element={<IndustryServePage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route path="/case-studies/projects" element={<CaseStudySinglePage />} />
         </Routes>
       </Suspense>
     </Router>

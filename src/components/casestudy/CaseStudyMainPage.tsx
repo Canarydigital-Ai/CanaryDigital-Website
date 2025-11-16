@@ -1,5 +1,6 @@
 import React from "react";
 import Arrow from "../../assets/Arrow.png";
+import { useNavigate } from "react-router-dom";
 
 const FoggyVido =
   "https://res.cloudinary.com/ddyymyvny/video/upload/v1761887368/Foggy_Vido_ns07em.mov";
@@ -50,6 +51,9 @@ const videos = [
 ];
 
 const CaseStudyMainPage: React.FC = () => {
+  const navigate = useNavigate();
+
+
   return (
     <>
       <div className=" px-4 md:px-10 lg:px-20 py-16 md:py-20  border-b border-[#242424]">
@@ -72,6 +76,7 @@ const CaseStudyMainPage: React.FC = () => {
             <div className="relative" key={index}>
               <video src={item.src} autoPlay loop muted></video>
               <div
+                onClick={() => navigate("/case-studies/projects")}
                 className="absolute bottom-0 px-6 pt-7 w-full h-[110px]"
                 style={{
                   backdropFilter: `blur(${item.blur})`,

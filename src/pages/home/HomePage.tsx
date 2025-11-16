@@ -6,8 +6,8 @@ import OurProductSection from "../../components/homepage/OurProductSection";
 import OurServiceSection from "../../components/homepage/OurServiceSection";
 import WorksSection from "../../components/homepage/WorksSection";
 import AboutUsSection from "../../components/homepage/AboutUsSection";
-import AdvantagesSection from "../../components/homepage/AdvantagesSection";
-import ContactSection from "../../components/homepage/ContactSection";
+import AdvantagesSection from "../../components/homepage/AdvantagesSection"; 
+import FooterSection from "../../components/Footer/FooterSection";
 
 const HomePage: React.FC = () => {
   return (
@@ -20,7 +20,7 @@ const HomePage: React.FC = () => {
       <WorksSection />
       <AboutUsSection />
       <AdvantagesSection />
-      <ContactSection />
+      <FooterSection />
     </div>
   );
 };
