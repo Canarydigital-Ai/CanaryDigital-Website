@@ -137,7 +137,6 @@ const IndustryServeSection: React.FC = () => {
         ))}
       </Slider>
 
-      <Testimonials />
     </div>
   );
 };
