@@ -4,6 +4,7 @@ import ProductsPage from './pages/products/ProductsPage';
 import CaseStudiesPage from './pages/casestudies/CaseStudiesPage';
 import CaseStudySinglePage from './pages/casestudies/CaseStudySinglePage';
 import AboutUsPage from './pages/about/AboutUsPage';
+import BlogSinglePage from './pages/blogs/BlogSinglePage';
  
 const HomePage = lazy(() => import('./pages/home/HomePage'));
 const BrandPage = lazy(() => import('./pages/brands/BrandPage'));
@@ -23,6 +24,7 @@ const App: React.FC = () => {
           <Route path="/services" element={<ServicePage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/blogs" element={<BlogsPage />} />
+          <Route path="/blogs-single" element={<BlogSinglePage />} />
           <Route path="/industries-we-serve" element={<IndustryServePage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/case-studies" element={<CaseStudiesPage />} />

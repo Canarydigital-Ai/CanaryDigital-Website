@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
-import Testimonials from "./Testimonials";
+// import Testimonials from "./Testimonials";
 
 const IndustryServeSection: React.FC = () => {
   const sliderRef = useRef<Slider | null>(null);

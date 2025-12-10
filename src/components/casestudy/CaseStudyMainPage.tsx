@@ -53,7 +53,6 @@ const videos = [
 const CaseStudyMainPage: React.FC = () => {
   const navigate = useNavigate();
 
-
   return (
     <>
       <div className=" px-4 md:px-10 lg:px-20 py-16 md:py-20  border-b border-[#242424]">
