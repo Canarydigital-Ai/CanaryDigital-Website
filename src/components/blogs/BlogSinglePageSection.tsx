@@ -33,7 +33,7 @@ const BlogSinglePageSection: React.FC = () => {
 
   return (
     <div className="px-4 md:px-10 lg:px-16 py-8 md:py-20">
-      <h1 className="max-w-[600px] text-4xl leading-normal">
+      <h1 className="max-w-[600px] text-[54px] leading-[64px]">
           <span className="text-[#FBCB0B] whitespace-nowrap">
             The Rise of AI Agents in 2025:
           </span>
