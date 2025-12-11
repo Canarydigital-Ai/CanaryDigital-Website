@@ -11,12 +11,12 @@ const BlogSinglePageSection: React.FC = () => {
     {
       image: lap1,
       title: "Optimizing Workflow Processes for Maximum Efficiency",
-      content:"Optimizing workflow processes isn’t just about saving time - it’s about working smarter, reducing delays, and boosting overall efficiency..."
+      content:"Optimizing workflow processes isn't just about saving time - it's about working smarter, reducing delays, and boosting overall efficiency..."
     },
     {
       image: lap2,
       title: "Optimizing Workflow Processes for Maximum Efficiency",
-      content: "Optimizing workflow processes isn’t just about saving time - it’s about working smarter, reducing delays, and boosting overall efficiency..."
+      content: "Optimizing workflow processes isn't just about saving time - it's about working smarter, reducing delays, and boosting overall efficiency..."
     },
   ];
 
@@ -50,11 +50,12 @@ const BlogSinglePageSection: React.FC = () => {
         continuously learning. Their applications span across multiple
         industries, from customer service to finance, entertainment, and beyond.
       </p>
-      <img src={blogsingle1} className="mt-20" />
+      <img src={blogsingle1} className="mt-20 w-full" />
 
-      <div className="grid grid-cols-10">
-        <div className="col-span-7 text-xl text-[#999999] font-extralight">
-          <h2 className="text-[#FBCA0C] text-3xl mt-20">
+      <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 lg:gap-0">
+        {/* Main Content - Takes full width on mobile, 7/10 on desktop */}
+        <div className="lg:col-span-7 text-xl text-[#999999] font-extralight">
+          <h2 className="text-[#FBCA0C] text-3xl mt-10 lg:mt-20">
             Understanding AI Agents
           </h2>
           <p className="mt-10">
@@ -102,27 +103,30 @@ const BlogSinglePageSection: React.FC = () => {
             );
           })}
         </div>
-        <div className="col-span-3 mt-40 border-l border-[#363636] pl-8">
-          <div className="flex gap-3">
-            <div className=" border rounded-full p-2">
+        
+        {/* Sidebar - Takes full width on mobile, 3/10 on desktop */}
+        <div className="lg:col-span-3 lg:mt-40 lg:border-l lg:border-[#363636] lg:pl-8">
+          <div className="flex gap-3 mb-8 lg:mb-0">
+            <div className="border rounded-full p-2 cursor-pointer hover:bg-[#FBCA0C] hover:text-black transition-colors">
               <RiLinkedinFill className="w-6 h-6" />
             </div>
-            <div className=" border rounded-full p-2">
+            <div className="border rounded-full p-2 cursor-pointer hover:bg-[#FBCA0C] hover:text-black transition-colors">
               <FaInstagram className="w-6 h-6" />
             </div>
-            <div className=" border rounded-full p-2">
+            <div className="border rounded-full p-2 cursor-pointer hover:bg-[#FBCA0C] hover:text-black transition-colors">
               <FaTwitter className="w-6 h-6" />
             </div>
           </div>
 
-          <h2 className="mt-15 text-[#FBCA0C] text-3xl">Latest Article</h2>
+          <h2 className="text-[#FBCA0C] text-3xl mt-15 lg:mb-15">Latest Article</h2>
 
-          <div className="mt-15">
+          <div className="space-y-12 lg:space-y-15">
             {items.map((item, index) => {
               return (
-                <div key={index}>
-                  <img src={item.image} />
-                  <p className="mt-5 font-light">{item.title}</p>
+                <div key={index} className="border-b border-[#363636] pb-8 lg:border-none lg:pb-0">
+                  <img src={item.image} className="w-full h-auto" />
+                  <p className="mt-5 font-light text-white">{item.title}</p>
+                  <p className="mt-3 text-[#999999] text-sm">{item.content}</p>
                 </div>
               );
             })}
