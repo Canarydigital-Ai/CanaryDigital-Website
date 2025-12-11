@@ -37,7 +37,7 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div className="space-y-4">
-              <p className="text-gray-400 text-sm">Get in touch</p>
+              <p className="text-gray-400 text-[32px]">Get in touch</p>
               <div className="space-y-2">
                 <a 
                   href="mailto:info@canarydigital.ai" 
@@ -71,7 +71,7 @@ const ContactForm: React.FC = () => {
           </div>
 
           {/* Right Section - Form */}
-          <div className="bg-black rounded-lg p-8 md:p-10">
+          <div className="bg-black rounded-lg p-8 md:p-10 w-[575px] h-[675px]">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-white text-sm mb-3">Name</label>
