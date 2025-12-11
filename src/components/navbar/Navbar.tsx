@@ -450,6 +450,9 @@ const Navbar: React.FC = () => {
       case "Blogs":
         navigate("/blogs");
         break;
+      case "Contact Us":
+        navigate("/contact");
+        break;
       default:
         break;
     }
@@ -492,6 +495,9 @@ const Navbar: React.FC = () => {
         break;
       case "Blogs":
         navigate("/blogs");
+        break;
+      case "Contact Us":
+        navigate("/contact");
         break;
       default:
         break;
