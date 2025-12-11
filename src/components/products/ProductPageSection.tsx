@@ -10,9 +10,14 @@ import RightGIF2 from "../../assets/product imgs/RightGIF2.gif";
 import RightGIF3 from "../../assets/product imgs/RightGIF3.gif";
 import RightGIF4 from "../../assets/product imgs/RightGIF4.mp4";
 import RightGIF5 from "../../assets/product imgs/RightGIF5.gif";
+import ProductBanner2 from "../../assets/product imgs/ProductBanner2.png";
+import ProductBanner3 from "../../assets/product imgs/ProductBanner3.png";
+import ProductBanner4 from "../../assets/product imgs/ProductBanner4.png";
+import ProductBanner5 from "../../assets/product imgs/ProductBanner5.png";
 
 import Thumbnail from "../../assets/product imgs/thumbnail.png";
 import { FaPlay } from "react-icons/fa";
+import { image, sub } from "framer-motion/client";
 
 const items = [
   { img: LeftGIF1, label: "Startups" },
@@ -33,6 +38,39 @@ const ProductPageSection: React.FC = () => {
     setTimeout(() => videoRef.current?.play(), 100);
   };
 
+  const section1 = [
+    {
+      title: "AI Assistant to Audit, Optimize & Grow",
+      subtitle:
+        "Experience smarter SEO with Canary Digital’s AI driven solution — built to uncover opportunities, enhance visibility, and drive measurable result",
+      image: ProductBanner,
+    },
+    {
+      title: "Canary Vision: The Future of Intelligent Monitoring",
+      subtitle:
+        "Canary Vision brings AI powered intelligence to your existing CCTV, detecting behaviour, tracking occupancy, and delivering real time insights for safer, smarter spaces.",
+      image: ProductBanner2,
+    },
+    {
+      title: "PaperLens Scan Anything Store Everything",
+      subtitle:
+        "PaperLens instantly converts any document you capture—business cards, invoices, IDs, or receipts—into a smart, searchable digital file, automatically detects the document type, organizes it into the right folder, and lets you save or share it effortlessly.",
+      image: ProductBanner3,
+    },
+    {
+      title: "From  Event Creation to  Memories Powered by AI",
+      subtitle:
+        "Selfind.ai is an AI-powered platform that helps guests easily find, share, and relive event memories using advanced face recognition. Simply upload a selfie, and Selfind.ai organizes and securely shares your photos with custom branding options.",
+      image: ProductBanner4,
+    },
+    {
+      title: "Turn Ideas into Scripts & Storyboards",
+      subtitle:
+        "Fable is your AI-powered creative partner that instantly transforms ideas into scripts, shotlists, and storyboards. Whether you'recreating adfilms, digital content, or brandstories, Fable accelerates your creative workflow while ensuring your vision is visually cohesive and production-ready.",
+      image: ProductBanner5,
+    },
+  ];
+
   return (
     <div className="bg-[#0A0A0A]">
       {/* main banner section */}
@@ -42,13 +80,13 @@ const ProductPageSection: React.FC = () => {
           backgroundImage: `url(${ProductBanner})`,
           backgroundSize: "cover",
         }}
-      >
+        >
         {/* Content */}
         <div className="relative space-y-6 sm:space-y-8 px-4 sm:px-6 w-full max-w-full sm:max-w-[540px] md:max-w-[640px] mt-40 sm:mt-48 md:mt-60">
           <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-[1.2] sm:leading-[1.3] md:leading-[56px] lg:leading-[60px]">
             AI Assistant to Audit, Optimize & Grow
           </h2>
-          <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-light leading-[1.4] sm:leading-[20px] md:leading-[22px] lg:leading-[25px] text-[#999999]">
+          <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-light leading-[1.4] sm:leading-[20px] md:leading-[22px] lg:leading-[25px] text-[#FFFFFF]">
             Experience smarter SEO with Canary Digital's AI driven solution -
             built to uncover opportunities, enhance visibility, and drive
             measurable results
