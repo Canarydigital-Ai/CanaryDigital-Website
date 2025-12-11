@@ -4,7 +4,10 @@
 import FoggyLogo from "../../assets/caseStudy imgs/Foggy_Logo.png";
 import FoggyImg1 from "../../assets/caseStudy imgs/Foggy Img1.png";
 import FoggyImg2 from "../../assets/caseStudy imgs/Foggy Img2.png";
+
 import SNBLogo from "../../assets/caseStudy imgs/SNB logo.png";
+import SNBImg1 from "../../assets/caseStudy imgs/SNB img 1.png";
+import SNBImg2 from "../../assets/caseStudy imgs/SNB img 2.png";
 
 export const caseStudyData = [
   {
@@ -87,8 +90,8 @@ export const caseStudyData = [
 
     challenges:"We tackled poor digital visibility and low engagement with strategic design, AI driven solutions and a unified brand experience because in today’s world, connection and clarity aren’t optional, they’re essential",
         translatingImgs: {
-      img1: `${FoggyImg1}`,
-      img2: `${FoggyImg2}`
+      img1: `${SNBImg1}`,
+      img2: `${SNBImg2}`
     },
       
     caseSolutions: [
@@ -109,7 +112,7 @@ export const caseStudyData = [
       {
         id: "03",
         title: "Why it matters",
-        content: `By combining strategic design, compelling visuals, and targeted marketing, we transformed Foggy Mountain from a newly launched adventure park into a credible, engaging, and highly discoverable destination.`,
+        content: `This was more than just a design upgrade. SNB now has a strong digital presence that builds trust, communicates value clearly, and supports business growth. The new website and profile work hand in hand to show exactly who SNB is and why they matter, making a lasting impression on both clients and partners`,
       },
     ],
     performance: [

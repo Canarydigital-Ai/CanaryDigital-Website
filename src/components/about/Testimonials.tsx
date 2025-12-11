@@ -74,39 +74,50 @@ const Testimonials: React.FC = () => {
     }
   };
 
-  return (
-    <div className="container mx-auto h-[400px] bg-black mb-30">
-      <div className="px-50 flex flex-col py-10">
-        <h3 className="text-[#FBCA0C]">Testimonials</h3>
-        <div className="flex justify-between">
-          <h1 className="text-3xl mt-1">What People Say?</h1>
+return (
+    <div className="pt-12 md:pt-16 lg:pt-20 pb-20 md:pb-32 px-4 md:px-10 lg:px-16">
+      <div className="w-full max-w-7xl mx-auto flex flex-col">
+        <h3 className="text-[#FBCA0C] text-lg md:text-xl leading-[26px] md:leading-[30px]">
+          Testimonials
+        </h3>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4 sm:gap-0">
+          <h1 className="text-[28px] leading-[38px] md:text-[36px] md:leading-[55px]">
+            What People Say?
+          </h1>
           <div className="flex">
             <button
               onClick={prevPage}
-              className="w-8 h-8 flex justify-center items-center border text-[#C9C9C9] border-[#C9C9C9] rounded-full"
+              className="w-8 h-8 flex justify-center items-center border text-[#C9C9C9] border-[#C9C9C9] rounded-full hover:opacity-80 transition-opacity"
+              aria-label="Previous testimonial"
             >
               ←
             </button>
             <button
               onClick={nextPage}
-              className="ml-4 w-8 h-8 flex justify-center items-center text-[#C9C9C9] border border-[#C9C9C9] rounded-full"
+              className="ml-4 w-8 h-8 flex justify-center items-center text-[#C9C9C9] border border-[#C9C9C9] rounded-full hover:opacity-80 transition-opacity"
+              aria-label="Next testimonial"
             >
               →
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 py-10 gap-5">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-4 md:gap-5">
           {visibleItems.map((item, index) => (
             <div
               key={index}
-              className="border border-[#FFFFFF1A] p-5 rounded-lg bg-[#121212] max-w-[400px] h-[220px]"
+              className="border border-[#FFFFFF1A] p-6 md:p-8 rounded-lg bg-[#121212]"
             >
-              <div className="flex flex-col-3 justify-between">
-                <div className="flex">
-                  <img src={item.icon1} alt="icon" />
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                  <img 
+                    src={item.icon1} 
+                    alt={`${item.name}'s profile`} 
+                    className="w-10 h-10 md:w-12 md:h-12"
+                  />
                   <div className="flex flex-col ml-3">
-                    <p className="text-xs">{item.name}</p>
-                    <p className="text-xs font-thin text-gray-400 mt-1 whitespace-nowrap">
+                    <p className="text-base leading-6 font-medium">{item.name}</p>
+                    <p className="text-sm leading-5 text-[#FFFFFF99] whitespace-nowrap overflow-hidden text-ellipsis">
                       {item.company}
                     </p>
                   </div>
@@ -114,12 +125,12 @@ const Testimonials: React.FC = () => {
                 <div>
                   <img
                     src={item.icon2}
-                    alt="icon"
-                    className="ml-20 w-13 h-13"
+                    alt="Company logo"
+                    className="w-10 h-10 md:w-13 md:h-13"
                   />
                 </div>
               </div>
-              <p className="mt-4 text-sm font-thin bg-[#121212]">
+              <p className="mt-4 md:mt-5 text-sm md:text-base leading-[22px] md:leading-6 text-[#FFFFFFCC]">
                 {item.content}
               </p>
             </div>

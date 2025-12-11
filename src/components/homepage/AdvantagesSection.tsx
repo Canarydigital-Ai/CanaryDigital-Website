@@ -1,59 +1,69 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import ToolsSlider from "./ToolsSlider";
 
+const advantages = [
+  {
+    id: "1",
+    number: "01",
+    title: "Standout Presence & Clear Communication",
+    description:
+      "Canary Digital helps your brand shine with distinctive solutions and ensures your message is delivered clearly and effectively.",
+  },
+  {
+    id: "2",
+    number: "02",
+    title: "Trustworthy & Timely",
+    description:
+      "Canary Digital helps your brand shine with distinctive solutions and ensures your message is delivered clearly and effectively.",
+  },
+  {
+    id: "3",
+    number: "03",
+    title: "Flexible & Adaptive",
+    description:
+      "Our solutions are tailored to fit your unique business needs and evolve with changing market conditions.",
+  },
+  {
+    id: "4",
+    number: "04",
+    title: "Positive & Detail-Oriented",
+    description:
+      "We foster positive partnerships and deliver with precision, ensuring every detail meets the highest standards.",
+  },
+];
+
 const AdvantagesSection: React.FC = () => {
   const sliderRef = useRef<Slider | null>(null);
+  const [slidesToShow, setSlidesToShow] = useState(3);
 
-  const advantages = [
-    {
-      id: "1",
-      number: "01",
-      title: "Standout Presence & Clear Communication",
-      description:
-        "Canary Digital helps your brand shine with distinctive solutions and ensures your message is delivered clearly and effectively.",
-    },
-    {
-      id: "2",
-      number: "02",
-      title: "Trustworthy & Timely",
-      description:
-        "Canary Digital helps your brand shine with distinctive solutions and ensures your message is delivered clearly and effectively.",
-    },
-    {
-      id: "3",
-      number: "03",
-      title: "Flexible & Adaptive",
-      description:
-        "Our solutions are tailored to fit your unique business needs and evolve with changing market conditions.",
-    },
-    {
-      id: "4",
-      number: "04",
-      title: "Positive & Detail-Oriented",
-      description:
-        "We foster positive partnerships and deliver with precision, ensuring every detail meets the highest standards.",
-    },
-  ];
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width <= 640) {
+        setSlidesToShow(1);
+      } else if (width <= 1024) {
+        setSlidesToShow(2);
+      } else {
+        setSlidesToShow(3);
+      }
+    };
+
+    handleResize(); // run on load
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const settings = {
     dots: false,
     infinite: false,
     speed: 600,
-    slidesToShow: 3,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
     swipeToSlide: true,
     arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 640,
-        settings: { slidesToShow: 1 },
-      },
-    ],
   };
 
   return (
@@ -98,8 +108,8 @@ const AdvantagesSection: React.FC = () => {
           </div>
         ))}
       </Slider>
- 
-      <ToolsSlider /> 
+
+      <ToolsSlider />
     </div>
   );
 };

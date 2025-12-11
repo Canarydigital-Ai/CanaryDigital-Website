@@ -1,17 +1,17 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
-import ProductsPage from './pages/products/ProductsPage';
-import CaseStudiesPage from './pages/casestudies/CaseStudiesPage';
-import CaseStudySinglePage from './pages/casestudies/CaseStudySinglePage';
-import AboutUsPage from './pages/about/AboutUsPage';
-import BlogSinglePage from './pages/blogs/BlogSinglePage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
  
 const HomePage = lazy(() => import('./pages/home/HomePage'));
+const AboutUsPage = lazy(() => import('./pages/about/AboutUsPage'));
 const BrandPage = lazy(() => import('./pages/brands/BrandPage'));
+const ProductsPage = lazy(() => import('./pages/products/ProductsPage'));
 const ServicePage = lazy(() => import('./pages/services/ServicePage'));
 const PortfolioPage = lazy(() => import('./pages/portfolio/PortfolioPage'));
 const BlogsPage = lazy(() => import('./pages/blogs/BlogsPage'));
+const BlogSinglePage = lazy(() => import('./pages/blogs/BlogSinglePage'));
 const IndustryServePage = lazy(() => import('./pages/about/IndustryServePage'));
+const CaseStudiesPage = lazy(() => import('./pages/casestudies/CaseStudiesPage'));
+const CaseStudySinglePage = lazy(() => import('./pages/casestudies/CaseStudySinglePage'));
 
 const App: React.FC = () => {
   return (
@@ -28,7 +28,7 @@ const App: React.FC = () => {
           <Route path="/industries-we-serve" element={<IndustryServePage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/case-studies" element={<CaseStudiesPage />} />
-        <Route path="/case-studies/:id" element={<CaseStudySinglePage />} />
+          <Route path="/case-studies/:id" element={<CaseStudySinglePage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
         </Routes>
       </Suspense>
