@@ -86,7 +86,7 @@ const ProductPageSection: React.FC = () => {
           <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-[1.2] sm:leading-[1.3] md:leading-[56px] lg:leading-[60px]">
             AI Assistant to Audit, Optimize & Grow
           </h2>
-          <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-light leading-[1.4] sm:leading-[20px] md:leading-[22px] lg:leading-[25px] text-[#999999]">
+          <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-light leading-[1.4] sm:leading-[20px] md:leading-[22px] lg:leading-[25px] text-[#FFFFFF]">
             Experience smarter SEO with Canary Digital's AI driven solution -
             built to uncover opportunities, enhance visibility, and drive
             measurable results
