@@ -9,6 +9,7 @@ import ProductPage2 from './pages/products/ProductPage2';
 import ProductPage3 from './pages/products/ProductPage3';
 import ProductPage4 from './pages/products/ProductPage4';
 import ProductPage5 from './pages/products/ProductPage5';
+
  
 const HomePage = lazy(() => import('./pages/home/HomePage'));
 const BrandPage = lazy(() => import('./pages/brands/BrandPage'));
@@ -16,6 +17,7 @@ const ServicePage = lazy(() => import('./pages/services/ServicePage'));
 const PortfolioPage = lazy(() => import('./pages/portfolio/PortfolioPage'));
 const BlogsPage = lazy(() => import('./pages/blogs/BlogsPage'));
 const IndustryServePage = lazy(() => import('./pages/about/IndustryServePage'));
+const ContactForm = lazy(() => import('./pages/contactForm/ContactForm'));
 
 const App: React.FC = () => {
   return (
@@ -38,6 +40,7 @@ const App: React.FC = () => {
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/case-studies/projects" element={<CaseStudySinglePage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
+          <Route path='/contact' element={<ContactForm />} />
         </Routes>
       </Suspense>
     </Router>
